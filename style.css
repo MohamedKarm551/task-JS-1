@@ -1,0 +1,36 @@
+.test {
+    width: 50%;
+    margin: auto;
+}
+
+button {
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    margin-left: 108px;
+    border: 1px solid;
+    font-size: 20px;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+input,
+select {
+    padding: 7px;
+    border-radius: 1em;
+    border: 1px solid #cddc39;
+    box-shadow: -1px 7px 28px rgb(0 0 0 / 25%), 5px 3px 10px rgb(0 0 0 / 22%);
+    color: #fff;
+    background: #000;
+}
+
+.result {
+    border: 1px solid #000;
+    display: block;
+    margin: 20px auto;
+    width: 51%;
+    border-radius: 1em;
+    padding: 20px;
+}
