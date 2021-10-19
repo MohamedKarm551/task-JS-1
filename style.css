@@ -34,3 +34,24 @@ select {
     border-radius: 1em;
     padding: 20px;
 }
+
+
+/*  */
+
+.task2 {
+    width: 155px;
+    display: block;
+    margin: 20px auto;
+    font-size: 12pt;
+    font-weight: bold;
+    border-bottom: 7px solid #2b5464;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    border-top: 7px solid #247cff;
+    text-align: center;
+    align-items: center;
+}
