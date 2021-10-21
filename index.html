@@ -13,6 +13,7 @@
 
 <body>
     <!-- Task 1 -->
+    <h2 class="task-title">Task 1</h2>
     <div class="test">
         <input type="number" name="" id="x" value="0">
         <input type="number" name="" id="y" value="0">
@@ -25,7 +26,7 @@
             </optgroup>
     
         </select>
-        <button id="res">result</button>
+        <button id="res" onclick="operators()">result</button>
     </div>
 
     <!--  -->
@@ -35,15 +36,31 @@
     <!-- End of task1 -->
 
     <!-- Task 2 -->
-    <h2 class="task2">Task 2</h2>
+    <h2 class="task-title">Task 2</h2>
     <input type="text" name="" id="name">
     <button id="add">Add</button>
     <br>
     <h2 id="count-is"></h2>
     <!-- End of task 2 -->
-
-
-
+    <!-- task in session -->
+    <!-- 1000 10   1000:2000 20    big  30% -->
+    <hr>
+    <hr>
+    <hr>
+    <input type="number" name="" id="earn">
+    <button id="ok" onclick="tax()"> نسبة الضرائب</button>
+    <h2 id="show-it"></h2>
+    <hr>
+    <hr>
+    <hr>
+    <!-- task 3  21 Oct -->
+    <h2 class="task-title">Task 3</h2>
+    <input type="number" name="" id="grade" placeholder="your grade from  total">
+    <input type="number" name="" id="total" placeholder="Total">
+    <button id="ok" onclick="grade()"> نتيجتك بالدرجات والنسبة  </button>
+    <input type="text" name="" id="percent" placeholder="النسبة المئوية">
+    <input type="text" name="" id="ranking" placeholder="التقدير">
+    <!--end of  task 3  21 Oct -->
     <script src="java.js"></script>
 </body>
 

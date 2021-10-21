@@ -5,7 +5,7 @@
 
 button {
     padding: 10px;
-    width: 100px;
+    width: fit-content;
     text-align: center;
     background: #000;
     color: #fff;
@@ -38,7 +38,7 @@ select {
 
 /*  */
 
-.task2 {
+.task-title {
     width: 155px;
     display: block;
     margin: 20px auto;
@@ -55,3 +55,6 @@ select {
     text-align: center;
     align-items: center;
 }
+
+
+/*  */
