@@ -62,7 +62,7 @@ document.getElementById("add").onclick = function() {
     }
     // 
 
-
+// in lecture
 
 function tax() {
     var earn = document.getElementById("earn").value;
@@ -90,4 +90,102 @@ function grade() {
         document.getElementById("ranking").value = "مقبول";
 
     } else if (percent > 50 && percent <= 65) { document.getElementById("ranking").value = "جيد"; } else if (percent > 65 && percent <= 75) { document.getElementById("ranking").value = "  جيد جدا"; } else if (percent > 75 && percent <= 85) { document.getElementById("ranking").value = "جيد جدا"; } else if (percent > 85 && percent <= 100) { document.getElementById("ranking").value = "امتياز"; } else { document.getElementById("ranking").value = "error"; }
+}
+//task 4
+var listImg = [
+    "img/img1.webp",
+    "img/img2.webp",
+    "img/img3.webp",
+    "img/img4.webp",
+    "img/img5.webp",
+    "img/img6.webp",
+    "img/img7.webp",
+    "img/img8.webp",
+    "img/img9.webp"
+]
+
+function displayProduct() {
+    var temp = "";
+    for (var i = 0; i < listImg.length; i++) {
+        temp += `     
+        <div class="product">
+        <div class="product-img">
+            <img src="` + listImg[i] + `" alt=""></div>
+        <div class="product-info">
+            <h3>any Title</h3>
+            <p>any pharagraph</p>
+        </div>
+    </div>`
+    }
+    document.getElementById("productRow").innerHTML = temp;
+}
+displayProduct();
+
+// in lecture 26 Oct 2021
+// To Do List
+
+var arrayList = [];
+
+
+
+function view() {
+    var count = arrayList.length;
+    var text = "";
+    for (var i = 0; i < count; i++) {
+        text += `<li ondblclick=destroy(` + i + `) >` + arrayList[i] + `</li> 
+        <span onclick="destroy(` + i + `) " style="
+        display: inline;
+        background: #ddd;
+        width: fit-content;
+        padding: 3px 8px;
+        border-radius: 1em;
+        font-size: small;
+        filter: drop-shadow(2px
+     4px
+     2px #000);
+    ">remove element</span>   <span style='color:green;display: block;margin: 12px;' onclick='update(` + i + `)'>update</span>`;
+    }
+
+    document.getElementById("list-items").innerHTML = text;
+}
+
+function addInlist() {
+    var task = document.getElementById("input-task").value;
+    arrayList.push(task);
+    task = document.getElementById("input-task").value = "";
+    console.log(arrayList);
+    document.getElementById("Add").style.boxShadow = "0px 0px 20px red";
+    view();
+}
+
+function destroy(index) {
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+    // parameters:
+    //     splice(start)
+    // splice(start, deleteCount) 
+    // splice(start, deleteCount, item1)
+    // splice(start, deleteCount, item1, item2, itemN)
+    arrayList.splice(index, 1);
+    // delete "1"number from  list[index]
+    view();
+}
+
+function update(index) {
+    document.getElementById("Add").style.display = "none";
+
+    document.getElementById("input-task").value = arrayList[index];
+    document.getElementById("update").style.display = "inline-block";
+    document.getElementById("hidden-input").value = index;
+
+}
+
+function edit() {
+    var task = document.getElementById("input-task").value;
+    var index = document.getElementById("hidden-input").value;
+    arrayList[index] = task;
+    document.getElementById("input-task").value = "";
+    document.getElementById("update").style.display = "none";
+    document.getElementById("Add").style.display = "inline-block";
+
+    view();
 }
