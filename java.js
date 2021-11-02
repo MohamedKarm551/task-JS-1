@@ -127,7 +127,7 @@ displayProduct();
 var arrayList = [];
 
 
-
+// view the list
 function view() {
     var count = arrayList.length;
     var text = "";
@@ -157,7 +157,7 @@ function addInlist() {
     document.getElementById("Add").style.boxShadow = "0px 0px 20px red";
     view();
 }
-
+// delete element
 function destroy(index) {
     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
     // parameters:
@@ -166,6 +166,8 @@ function destroy(index) {
     // splice(start, deleteCount, item1)
     // splice(start, deleteCount, item1, item2, itemN)
     arrayList.splice(index, 1);
+    // splice(start, deleteCount) 
+
     // delete "1"number from  list[index]
     view();
 }
@@ -189,3 +191,18 @@ function edit() {
 
     view();
 }
+// slide show
+var index = 0;
+var imgsSlide = ["img/item1.jpg", "img/item2.jpg", "img/item3.jpg", "img/item4.jpg", "img/img4.webp"];
+
+function slideShow() {
+    document.getElementById("slide-show").src = imgsSlide[index];
+    if (index < imgsSlide.length - 1) {
+        index++;
+    } else {
+        index = 0;
+
+    }
+
+}
+setInterval("slideShow()", 1500);
