@@ -86,7 +86,63 @@
     <p>double click on list item to delete</p>
     <ul id="list-items"></ul>
     <!--  -->
+    <hr>
+    <hr>
+    <hr>
+    <div class="To-Do-list2">
+        <label for="txt-name">Name: </label>
+        <br>
+        <input type="text" name="txt-name" id="txt-name" placeholder="Name">
+        <br>
+        <label for="txt-des">Description: </label>
+        <br>
+        <input type="text" name="txt-des" id="txt-des" placeholder="Description">
+        <br>
 
+        <label for="txt-salary">Salary: </label>
+        <br>
+        <input type="number" name="txt-salary" id="txt-salary" placeholder="$">
+        <br>
+        <label for="txt-info">info: </label>
+        <br>
+
+
+        <input type="text" name="txt-info" id="txt-info" placeholder="Info">
+        <br>
+        <button style="width: 200px;
+        background: darkcyan;
+    " id="txt-add" onclick="addlist2()">Add </button>
+    </div>
+    <div id="show-items" class="show-items">
+        <div class="list-item" style="
+    width: fit-content;
+    margin: 10px 10px 20px 10px;
+    text-align: center;
+">
+            <img src="img/img1.webp" alt="" style="
+    width: 100%;
+    object-fit: cover;
+">
+            <p style="
+    font-size: 20px;
+    font-family: cursive;
+">Name</p>
+            <span style="
+    background: green;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+">salary</span>
+
+            <p>info</p>
+            <p contenteditable="true">des</p>
+        </div>
+
+
+    </div>
+
+    <!--  -->
     <hr>
     <hr>
     <hr>

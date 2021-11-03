@@ -131,3 +131,38 @@ select {
 
 
 /*  */
+
+#txt-name,
+#txt-des,
+#txt-info,
+#txt-salary {
+    width: 350px;
+    padding: 10px 20px;
+    border-radius: 0.5em;
+    background: #fff;
+    border: 1px solid #2b5464;
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0 20px 0px;
+}
+
+.To-Do-list2 {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: #ddd;
+}
+
+label {
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.show-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}

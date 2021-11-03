@@ -201,8 +201,77 @@ function slideShow() {
         index++;
     } else {
         index = 0;
-
     }
 
 }
 setInterval("slideShow()", 1500);
+
+
+
+
+// To do list 2
+var listTwo = [];
+
+function viewList() {
+    var count = listTwo.length;
+    var text = "";
+    for (var i = 0; i < count; i++) {
+        text += ` <div>
+        <div class="list-item" style="
+    width: fit-content;
+    margin: 10px 10px 20px 10px;
+    text-align: center;
+">
+            <img src="img/img1.webp" alt="" style="
+    width: 100%;
+    object-fit: cover;
+">
+            <p style="
+    font-size: 20px;
+    font-family: cursive;
+">` + listTwo[i].Name + `</p>
+            <span style="
+    background: green;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+">` + listTwo[i].salary + `</span>
+
+            
+ <p contenteditable="true" style="font-family: cursive;">` + listTwo[i].info + `</p>
+
+            <p >` + listTwo[i].des + `</p>
+        </div>
+
+
+    </div>`
+
+    }
+    document.getElementById("show-items").innerHTML = text;
+
+}
+
+
+function addlist2() {
+    var nameItem = document.getElementById("txt-name").value;
+    var desItem = document.getElementById("txt-des").value;
+    var salaryItem = document.getElementById("txt-salary").value;
+    var infoItem = document.getElementById("txt-info").value;
+
+    var product = {
+        Name: nameItem,
+        des: desItem,
+        salary: salaryItem,
+        info: infoItem,
+    }
+    listTwo.push(product);
+    console.log(product);
+    console.log(listTwo);
+
+    viewList();
+    document.getElementById("txt-name").value = "";
+    document.getElementById("txt-des").value = "";
+    document.getElementById("txt-salary").value = "";
+    document.getElementById("txt-info").value = "";
+}
