@@ -275,3 +275,14 @@ function addlist2() {
     document.getElementById("txt-salary").value = "";
     document.getElementById("txt-info").value = "";
 }
+// 4 Nov
+var accord = document.getElementsByClassName("accord");
+console.log(accord);
+for (var i = 0; i < accord.length; i++) {
+    accord[i].addEventListener("click", function() {
+        var element = this.nextElementSibling;
+        element.classList.toggle("info");
+
+    });
+    // accord[i].addEventListener("click", alert("www"));
+}
