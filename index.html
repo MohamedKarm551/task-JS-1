@@ -13,21 +13,25 @@
 
 <body>
     <!-- Task 1 -->
-    <h2 class="task-title">Task 1</h2>
-    <div class="test">
-        <input type="number" name="" id="x" value="0">
-        <input type="number" name="" id="y" value="0">
-        <select id="select">
-            <optgroup label="العملية الحسابية">
-                <option  value="+">+</option>
-                <option  value="-">-</option>
-                <option  value="*">*</option>
-                <option  value="/">/</option>
-            </optgroup>
-    
-        </select>
-        <button id="res" onclick="operators()">result</button>
+
+    <div class="task1" style="margin-top: 200px;">
+        <h2 class="task-title">Task 1</h2>
+        <div class="test" id="top">
+            <input type="number" name="" id="x" value="0">
+            <input type="number" name="" id="y" value="0">
+            <select id="select">
+                <optgroup label="العملية الحسابية">
+                    <option  value="+">+</option>
+                    <option  value="-">-</option>
+                    <option  value="*">*</option>
+                    <option  value="/">/</option>
+                </optgroup>
+        
+            </select>
+            <button id="res" onclick="operators()">result</button>
+        </div>
     </div>
+
 
     <!--  -->
     <div class="result">
@@ -109,9 +113,14 @@
 
         <input type="text" name="txt-info" id="txt-info" placeholder="Info">
         <br>
+        <input type="hidden" id="toSaveIndex">
         <button style="width: 200px;
         background: darkcyan;
     " id="txt-add" onclick="addlist2()">Add </button>
+        <button style="width: 200px;
+        background: #142d2dbf;
+    " id="txt-update" onclick="editinfo()">Update </button>
+
     </div>
     <div id="show-items" class="show-items">
         <div class="list-item" style="
@@ -152,6 +161,22 @@
         object-fit: cover;
     ">
     </div>
+    <!-- 
+        // slide show
+var index = 0;
+var imgsSlide = ["img/item1.jpg", "img/item2.jpg", "img/item3.jpg", "img/item4.jpg", "img/img4.webp"];
+
+function slideShow() {
+    document.getElementById("slide-show").src = imgsSlide[index];
+    if (index < imgsSlide.length - 1) {
+        index++;
+    } else {
+        index = 0;
+    }
+
+}
+setInterval("slideShow()", 1500);
+     -->
     <!--  -->
     <!-- 4 Nov -->
     <h2 class="task-title">Task 4 Nov 2021</h2>
@@ -178,6 +203,14 @@
             </p>
 
         </div>
+    </div>
+    <!--  -->
+    <a href="#top">
+        <div id="fixed">☝🏼</div>
+    </a>
+
+    <div class="fixedNav" id="fixedNav">
+
     </div>
     <script src="java.js"></script>
 </body>

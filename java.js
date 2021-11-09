@@ -244,7 +244,13 @@ function viewList() {
             <p >` + listTwo[i].des + `</p>
         </div>
 
-
+        <button style="
+        margin: unset;
+        background: greenyellow; "  onclick="Update(` + i + `)">UPDATE</button>
+    <button style="
+    margin: 0 0 0 186px;
+    background: tomato; "
+"  onclick="deleteElement(` + i + `)">DELETE</button>
     </div>`
 
     }
@@ -275,6 +281,45 @@ function addlist2() {
     document.getElementById("txt-salary").value = "";
     document.getElementById("txt-info").value = "";
 }
+
+function deleteElement(index) {
+    listTwo.splice(index, 1);
+    viewList();
+}
+
+function Update(index) {
+    document.getElementById("txt-name").value = listTwo[index].Name;
+    document.getElementById("txt-des").value = listTwo[index].des;
+    document.getElementById("txt-salary").value = listTwo[index].salary;
+    document.getElementById("txt-info").value = listTwo[index].info + "my index is :" + index;
+    document.getElementById("toSaveIndex").value = index;
+
+    document.getElementById("txt-add").style.display = "none";
+    document.getElementById("txt-update").style.display = "block";
+
+}
+
+function editinfo() {
+
+    var index = document.getElementById("toSaveIndex").value;
+    // index
+    var nameItem = document.getElementById("txt-name").value;
+    listTwo[index].Name = nameItem;
+    var desItem = document.getElementById("txt-des").value;
+    listTwo[index].des = desItem;
+
+    var salaryItem = document.getElementById("txt-salary").value;
+    listTwo[index].salary = salaryItem;
+    var infoItem = document.getElementById("txt-info").value;
+    listTwo[index].info = infoItem;
+
+
+    viewList();
+    document.getElementById("txt-name").value = "";
+    document.getElementById("txt-des").value = "";
+    document.getElementById("txt-salary").value = "";
+    document.getElementById("txt-info").value = "";
+}
 // 4 Nov
 var accord = document.getElementsByClassName("accord");
 console.log(accord);
@@ -286,3 +331,19 @@ for (var i = 0; i < accord.length; i++) {
     });
     // accord[i].addEventListener("click", alert("www"));
 }
+// fixed and scroll
+window.onscroll = function scrollFixed() {
+        if (window.scrollY > 20) {
+            document.getElementById("fixedNav").style.backgroundColor = "gold";
+        }
+        if (window.scrollY > 100) {
+            document.getElementById("fixed").classList.add("fixed");
+
+        } else {
+            document.getElementById("fixed").classList.remove("fixed");
+            document.getElementById("fixedNav").style.backgroundColor = "#000";
+        }
+    }
+    // window.onscroll = function() {
+
+//
