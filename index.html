@@ -12,6 +12,20 @@
 </head>
 
 <body>
+    <a href="#top">
+        <div id="fixed">☝🏼</div>
+    </a>
+
+    <div class="fixedNav" id="fixedNav">
+        <h1 style="
+    color: #fff;
+    position: relative;
+    text-align: center;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    text-decoration: underline;
+">steps to learn java script</h1>
+    </div>
     <!-- Task 1 -->
 
     <div class="task1" style="margin-top: 200px;">
@@ -43,6 +57,12 @@
     <h2 class="task-title">Task 2</h2>
     <input type="text" name="" id="name">
     <button id="add">Add</button>
+    <!-- document.getElementById("add").onclick = function() {
+        var theText = document.getElementById("name").value;
+        users.push(theText);
+        console.log(users);
+        document.getElementById("count-is").innerHTML = "array length: " + users.length;
+        document.getElementById("name").value = ""; -->
     <br>
     <h2 id="count-is"></h2>
     <!-- End of task 2 -->
@@ -54,6 +74,19 @@
     <input type="number" name="" id="earn">
     <button id="ok" onclick="tax()"> نسبة الضرائب</button>
     <h2 id="show-it"></h2>
+    <!-- function tax() {
+        var earn = document.getElementById("earn").value;
+        if (earn <= 1000 && earn >= 0) {
+            document.getElementById("show-it").innerText = "  الضرائب" + (0.1 * earn);
+        } else if (earn > 1000 && earn <= 10000) {
+            document.getElementById("show-it").innerText = ": الضرائب" + (0.2 * earn);
+        } else if (earn > 10000) {
+            document.getElementById("show-it").innerText = " :الضرائب" + (0.3 * earn);
+        } else {
+            document.getElementById("show-it").innerText = "مفيش بالسالب يستا";
+        }
+    }
+     -->
     <hr>
     <hr>
     <hr>
@@ -205,11 +238,23 @@ setInterval("slideShow()", 1500);
         </div>
     </div>
     <!--  -->
-    <a href="#top">
-        <div id="fixed">☝🏼</div>
-    </a>
+    <button onclick="filterSelection('all')" id="txt-all">All</button>
+    <button onclick="filterSelection('Assaf')" id="txt-assaf">Assaf</button>
+    <button onclick="filterSelection('Cartoon')" id="txt-catroon">Cartoon</button>
+    <button onclick="filterSelection('Emoji')" id="txt-emoji">Emoji</button>
+    <div class="filter-imgs">
+        <img src="img/assaf1.jpg" name="assaf" title="ASSAF" value="0" class="imgForFilter" style="--i:1;">
+        <img src="img/assaf2.jpg" name="assaf" class="imgForFilter">
+        <img src="img/assaf3.jpg" name="assaf" class="imgForFilter">
+        <img src="img/cartoon1.png" name="Cartoon" class="imgForFilter">
+        <img src="img/assaf4.jpg" name="assaf" class="imgForFilter">
+        <img src="img/cartoon3.jpg" name="Cartoon" class="imgForFilter">
+        <img src="img/assaf5.jpg" name="assaf" class="imgForFilter">
+        <img src="img/cartoon2.jpg" name="Cartoon" class="imgForFilter">
+        <img src="img/emoji1.jpg" name="Emoji" class="imgForFilter">
+        <img src="img/emoji2.jpg" name="Emoji" class="imgForFilter">
+        <img src="img/emoji3.jpg" name="Emoji" class="imgForFilter">
 
-    <div class="fixedNav" id="fixedNav">
 
     </div>
     <script src="java.js"></script>

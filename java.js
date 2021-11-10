@@ -152,7 +152,7 @@ function view() {
 function addInlist() {
     var task = document.getElementById("input-task").value;
     arrayList.push(task);
-    task = document.getElementById("input-task").value = "";
+    document.getElementById("input-task").value = "";
     console.log(arrayList);
     document.getElementById("Add").style.boxShadow = "0px 0px 20px red";
     view();
@@ -347,3 +347,60 @@ window.onscroll = function scrollFixed() {
     // window.onscroll = function() {
 
 //
+function filterSelection(str) {
+    var arrayOfimgfilter = document.getElementsByClassName("imgForFilter");
+    console.log(arrayOfimgfilter);
+
+    if (str == "all") {
+        document.getElementById("txt-all").classList.add("Active");
+        document.getElementById("txt-assaf").classList.remove("Active");
+        document.getElementById("txt-catroon").classList.remove("Active");
+        document.getElementById("txt-emoji").classList.remove("Active");
+        for (var i = 0; i < arrayOfimgfilter.length; i++) {
+            arrayOfimgfilter[i].classList.remove("filter-hidden");
+
+        }
+
+    } else if (str == "Assaf") {
+        document.getElementById("txt-assaf").classList.add("Active");
+        document.getElementById("txt-all").classList.remove("Active");
+        document.getElementById("txt-catroon").classList.remove("Active");
+        document.getElementById("txt-emoji").classList.remove("Active");
+        for (var i = 0; i < arrayOfimgfilter.length; i++) {
+            if (arrayOfimgfilter[i].name != "assaf") {
+                arrayOfimgfilter[i].classList.add("filter-hidden");
+            } else {
+                arrayOfimgfilter[i].classList.remove("filter-hidden");
+            }
+        }
+        console.log(arrayOfimgfilter);
+
+    } else if (str == "Cartoon") {
+        document.getElementById("txt-catroon").classList.add("Active");
+        document.getElementById("txt-assaf").classList.remove("Active");
+        document.getElementById("txt-all").classList.remove("Active");
+        document.getElementById("txt-emoji").classList.remove("Active");
+        for (var i = 0; i < arrayOfimgfilter.length; i++) {
+            if (arrayOfimgfilter[i].name != "Cartoon") {
+                arrayOfimgfilter[i].classList.add("filter-hidden");
+            } else {
+                arrayOfimgfilter[i].classList.remove("filter-hidden");
+
+            }
+        }
+    } else if (str == "Emoji") {
+        document.getElementById("txt-emoji").classList.add("Active");
+        document.getElementById("txt-assaf").classList.remove("Active");
+        document.getElementById("txt-catroon").classList.remove("Active");
+        document.getElementById("txt-all").classList.remove("Active");
+        for (var i = 0; i < arrayOfimgfilter.length; i++) {
+            if (arrayOfimgfilter[i].name != "Emoji") {
+                arrayOfimgfilter[i].classList.add("filter-hidden");
+            } else {
+                arrayOfimgfilter[i].classList.remove("filter-hidden");
+
+            }
+        }
+    }
+
+}
