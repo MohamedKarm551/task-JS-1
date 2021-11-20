@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 1 Java</title>
-    <link rel="shortcut icon" href="https://scontent.fcai19-4.fna.fbcdn.net/v/t1.6435-1/p160x160/198876246_2815807305396579_787112143745137507_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=dbb9e7&_nc_ohc=_k6BCytOCfEAX8XfIoD&_nc_ht=scontent.fcai19-4.fna&oh=d7640b3d2b43a473f4706f4aacb71af0&oe=618B9990"
-        type="image/x-icon">
+    <link rel="shortcut icon" href="img/icons8-js-file-64.png" type="image/x-icon">
+
+    <!-- cdn font awsom icons -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,10 +29,20 @@
 ">steps to learn java script</h1>
     </div>
     <!-- Task 1 -->
-
-    <div class="task1" style="margin-top: 200px;">
+    <video autoplay="" muted="" loop="" style="
+    margin: 20px auto;
+    width: fit-content;
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+" id="top">
+        <source src="img/dragon.mp4" type="video/mp4">
+        <!-- https://svgjs.dev/docs/3.0/ -->
+     </video>
+    <div class="task1" style="margin-top: 100px;">
         <h2 class="task-title">Task 1</h2>
-        <div class="test" id="top">
+        <div class="test">
             <input type="number" name="" id="x" value="0">
             <input type="number" name="" id="y" value="0">
             <select id="select">
@@ -243,7 +255,7 @@ setInterval("slideShow()", 1500);
     <button onclick="filterSelection('Cartoon')" id="txt-catroon">Cartoon</button>
     <button onclick="filterSelection('Emoji')" id="txt-emoji">Emoji</button>
     <div class="filter-imgs">
-        <img src="img/assaf1.jpg" name="assaf" title="ASSAF" value="0" class="imgForFilter" style="--i:1;">
+        <img src="img/assaf1.jpg" name="assaf" title="ASSAF" class="imgForFilter">
         <img src="img/assaf2.jpg" name="assaf" class="imgForFilter">
         <img src="img/assaf3.jpg" name="assaf" class="imgForFilter">
         <img src="img/cartoon1.png" name="Cartoon" class="imgForFilter">
@@ -257,6 +269,75 @@ setInterval("slideShow()", 1500);
 
 
     </div>
+    <!--  -->
+    <h2 class="task-title">Task JSON</h2>
+
+    <!-- <ul id="JSONinput">
+
+    </ul>
+    <button onclick="getdate()">get data from"https://api.github.com/users"</button> -->
+    <br>
+    <br>
+    <br>
+    <input type="text" name="" id="repo" placeholder="get repo for user name " style="color: red;
+    background: #FFF;
+    font-size: 20px;">
+    <button onclick="getrepos()">GET repositories</button>
+    <ul id="respos" style="list-style: decimal-leading-zero;font-family: cursive;font-size: 13pt;font-weight: 700;">
+
+
+    </ul>
+    <!--  -->
+    <br>
+    <hr>
+    <hr>
+    <hr>
+    <h2 class="task-title">Task 20 Nov</h2>
+    <div class="container-slide-show">
+        <div class="item">
+            <img src="img/assaf1.jpg" alt="">
+            <div class="caption">
+                <h3>Assaf1</h3>
+                <p>assaf1</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/assaf2.jpg" alt="">
+            <div class="caption">
+                <h3>Assaf2</h3>
+                <p>assaf2</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/assaf3.jpg" alt="">
+            <div class="caption">
+                <h3>Assaf3</h3>
+                <p>assaf3</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/cartoon1.png" alt="">
+            <div class="caption">
+                <h3>cartoon1</h3>
+                <p>cartoon1</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="img/cartoon2.jpg" alt="">
+            <div class="caption">
+                <h3>cartoon2</h3>
+                <p>cartoon2</p>
+            </div>
+        </div>
+    </div>
+    <div class="lightBox-container">
+        <div class="ligtBox-item">
+            <i id="prev" class="fas fa-arrow-left"></i>
+            <i id="next" class="fas fa-arrow-right"></i>
+            <i id="close" class="far fa-times-circle"></i>
+        </div>
+    </div>
+    <img class="imgMouse" src="https://i.giphy.com/media/AHeTfHgVFPHgs/giphy.webp" alt="">
     <script src="java.js"></script>
 </body>
 

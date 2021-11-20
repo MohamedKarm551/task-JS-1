@@ -303,15 +303,14 @@ function editinfo() {
 
     var index = document.getElementById("toSaveIndex").value;
     // index
-    var nameItem = document.getElementById("txt-name").value;
-    listTwo[index].Name = nameItem;
-    var desItem = document.getElementById("txt-des").value;
-    listTwo[index].des = desItem;
+    listTwo[index].Name = document.getElementById("txt-name").value;
 
-    var salaryItem = document.getElementById("txt-salary").value;
-    listTwo[index].salary = salaryItem;
-    var infoItem = document.getElementById("txt-info").value;
-    listTwo[index].info = infoItem;
+    listTwo[index].des = document.getElementById("txt-des").value;
+
+
+    listTwo[index].salary = document.getElementById("txt-salary").value;
+
+    listTwo[index].info = document.getElementById("txt-info").value;
 
 
     viewList();
@@ -333,15 +332,28 @@ for (var i = 0; i < accord.length; i++) {
 }
 // fixed and scroll
 window.onscroll = function scrollFixed() {
-        if (window.scrollY > 20) {
+        // if (window.scrollY > 20) {
+        //     document.getElementById("fixedNav").style.backgroundColor = "gold";
+        // } else {
+        //     document.getElementById("fixedNav").style.backgroundColor = "#000";
+
+        // }
+        if (window.scrollY > 1500) {
+            document.getElementById("fixedNav").style.backgroundColor = "#ff00009e";
+        } else if (window.scrollY > 1000) {
+            document.getElementById("fixedNav").style.backgroundColor = "yellowgreen";
+
+        } else if (window.scrollY > 20) {
             document.getElementById("fixedNav").style.backgroundColor = "gold";
+
+        } else {
+            document.getElementById("fixedNav").style.backgroundColor = "#000";
         }
-        if (window.scrollY > 100) {
+        if (window.scrollY > 1000) {
             document.getElementById("fixed").classList.add("fixed");
 
         } else {
             document.getElementById("fixed").classList.remove("fixed");
-            document.getElementById("fixedNav").style.backgroundColor = "#000";
         }
     }
     // window.onscroll = function() {
@@ -358,7 +370,9 @@ function filterSelection(str) {
         document.getElementById("txt-emoji").classList.remove("Active");
         for (var i = 0; i < arrayOfimgfilter.length; i++) {
             arrayOfimgfilter[i].classList.remove("filter-hidden");
-
+            // .filter-hidden {
+            //     display: none;
+            // }
         }
 
     } else if (str == "Assaf") {
@@ -404,3 +418,217 @@ function filterSelection(str) {
     }
 
 }
+//
+// function getdate() {
+//     var json = new XMLHttpRequest();
+//     json.open("GET", "https://api.github.com/users", );
+//     json.send();
+//     json.onreadystatechange = function() {
+//         if (json.readyState == 4) {
+//             var data = JSON.parse(json.response);
+
+//             console.log(data);
+//             var str = "";
+//             var count = data.length;
+//             for (var i = 0; i < count; i++) {
+//                 str = str + "<li>" + data[i].id + " url: " + data[i].avatar_url + "</li>";
+//             }
+//         }
+//         document.getElementById("JSONinput").innerHTML = str;
+//     }
+// }
+
+function getrepos() {
+    var ajax = new XMLHttpRequest();
+    // https://api.github.com/users/MohamedKarm551/repos
+    // result
+    // {
+    // "id": 411382436,
+    // "node_id": "R_kgDOGIUypA",
+    // "name": "-my-style-for-temp1-zero-web-school-test",
+    // "full_name": "MohamedKarm551/-my-style-for-temp1-zero-web-school-test",
+    // "private": false,
+    // "owner": {
+    //   "login": "MohamedKarm551",
+    //   "id": 87906607,
+    //   "node_id": "MDQ6VXNlcjg3OTA2NjA3",
+    //   "avatar_url": "https://avatars.githubusercontent.com/u/87906607?v=4",
+    //   "gravatar_id": "",
+    //   "url": "https://api.github.com/users/MohamedKarm551",
+    //   "html_url": "https://github.com/MohamedKarm551",
+    //   "followers_url": "https://api.github.com/users/MohamedKarm551/followers",
+    //   "following_url": "https://api.github.com/users/MohamedKarm551/following{/other_user}",
+    //   "gists_url": "https://api.github.com/users/MohamedKarm551/gists{/gist_id}",
+    //   "starred_url": "https://api.github.com/users/MohamedKarm551/starred{/owner}{/repo}",
+    //   "subscriptions_url": "https://api.github.com/users/MohamedKarm551/subscriptions",
+    //   "organizations_url": "https://api.github.com/users/MohamedKarm551/orgs",
+    //   "repos_url": "https://api.github.com/users/MohamedKarm551/repos",
+    //   "events_url": "https://api.github.com/users/MohamedKarm551/events{/privacy}",
+    //   "received_events_url": "https://api.github.com/users/MohamedKarm551/received_events",
+    //   "type": "User",
+    //   "site_admin": false
+    // }}
+    //JSON stands for JavaScript Object Notation
+    var userLink = "https://api.github.com/users/" + document.getElementById("repo").value + "/repos";
+    ajax.open("GET", userLink);
+    ajax.send();
+    ajax.onreadystatechange = function() {
+        if (ajax.readyState == 4) {
+            var data = JSON.parse(ajax.response); //array
+            var str = "";
+            var count = data.length;
+            for (var i = 0; i < count; i++) {
+                str = str + "<li>  " + data[i].name + " </li>";
+                // str = str + "<li>  " + (i + 1) + " " + data[i].name + " </li>";
+            }
+        }
+        document.getElementById("respos").innerHTML = str;
+        // console.log(str);
+    }
+}
+// 20 Nov
+
+var arrayOfimgforSlideShow = Array.from(document.querySelectorAll(".item img "));
+console.log(arrayOfimgforSlideShow);
+
+
+for (var i = 0; i < arrayOfimgforSlideShow.length; i++) {
+    arrayOfimgforSlideShow[i].addEventListener("click", showSlide);
+}
+// .lightBox-container {
+//  background: #000000b5;
+// width: 100%;
+// height: 100%;
+// position: fixed;
+// inset: 0;
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// transform: scale(0);
+// -webkit-transform: scale(0);
+// -moz-transform: scale(0);
+// -ms-transform: scale(0);
+// -o-transform: scale(0);
+// transition: all .3s ease;
+// -webkit-transition: all .3s ease;
+// -moz-transition: all .3s ease;
+// -ms-transition: all .3s ease;
+// -o-transition: all .3s ease;
+//}
+var lightBoxContainer = document.querySelector(".lightBox-container");
+var ligtBoxitem = document.querySelector(".ligtBox-item");
+
+
+var currentIndex = 0;
+
+function showSlide(e) {
+    lightBoxContainer.style.transform = "scale(1)";
+    // console.log(e)
+    // console.log(e.target)          >>>>==img
+    // console.log(e.target.src)
+    var imgSrc = e.target.src;
+    currentIndex = arrayOfimgforSlideShow.indexOf(e.target); //index of current img
+    // .ligtBox-item {
+    //         background-image: url("img/assaf1.jpg");
+    ligtBoxitem.style.backgroundImage = "url(" + imgSrc + ")";
+    ligtBoxitem.style.height = "550px";
+}
+// when click on close 
+var Close = document.getElementById("close");
+Close.addEventListener("click", function() {
+    lightBoxContainer.style.transform = "scale(0)";
+});
+//  when click on right or left 
+var Next = document.getElementById("next");
+var Prev = document.getElementById("prev");
+next.addEventListener("click", goNext);
+prev.addEventListener("click", goPrev);
+
+
+function goNext() {
+    currentIndex++;
+    if (currentIndex >= arrayOfimgforSlideShow.length) {
+        currentIndex = 0;
+    }
+    ligtBoxitem.style.backgroundImage = "url(" + arrayOfimgforSlideShow[currentIndex].src + ")";
+    // arrayOfimgforSlideShow[currentIndex]====>img 
+}
+
+
+function goPrev() {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = arrayOfimgforSlideShow.length - 1;
+    }
+    ligtBoxitem.style.backgroundImage = "url(" + arrayOfimgforSlideShow[currentIndex].src + ")";
+    // arrayOfimgforSlideShow[currentIndex]====>img 
+
+}
+// -->      <--        "esc"
+document.addEventListener("keydown", function(e) {
+        console.log(e);
+        if (e.key == "ArrowRight") {
+            goNext()
+        } else if (e.key == "ArrowLeft") {
+            goPrev()
+        } else if (e.key == "Escape") {
+            lightBoxContainer.style.transform = "scale(0)";
+            hideLightBox()
+        }
+    }
+    // 
+    //.console.log(e):
+    // KeyboardEvent {isTrusted: true, key: 'ArrowRight', code: 'ArrowRight', location: 0, ctrlKey: false, …}
+    // isTrusted: true
+    // altKey: false
+    // bubbles: true
+    // cancelBubble: false
+    // cancelable: true
+    // charCode: 0
+    // code: "ArrowRight"
+    // composed: true
+    // ctrlKey: false
+    // currentTarget: null
+    // defaultPrevented: false
+    // detail: 0
+    // eventPhase: 0
+    // isComposing: false
+    // key: "ArrowRight"
+    // keyCode: 39
+    // location: 0
+    // metaKey: false
+    // path: (4) [body, html, document, Window]
+    // repeat: false
+    // returnValue: true
+    // shiftKey: false
+    // sourceCapabilities: InputDeviceCapabilities {firesTouchEvents: false}
+    // srcElement: body
+    // target: body
+    // timeStamp: 1238
+    // type: "keydown"
+    // view: Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+    // which: 39
+    // [[Prototype]]: KeyboardEvent
+    // 
+)
+
+
+
+
+// 
+
+// Mouse
+// css
+// .imgMouse {
+//     width: 50px;
+//     height: 50px;
+//     border-radius: 50%;
+//     position: absolute;
+// }
+// var mouse = document.querySelector(".imgMouse");
+
+// document.addEventListener("mousemove", function(e) {
+//     console.log(e);
+//     mouse.style.left = e.clientX - 60 + "px";
+//     mouse.style.top = e.clientY - 60 + "px";
+// })
