@@ -1,3 +1,14 @@
+// loading 
+
+let load = document.querySelector(".loading");
+
+window.addEventListener("load", function() {
+    load.style.display = "none";
+});
+
+
+// setInterval("load()",1500);
+
 function operators() {
 
     var num1 = document.getElementById("x").value;
@@ -576,40 +587,7 @@ document.addEventListener("keydown", function(e) {
             hideLightBox()
         }
     }
-    // 
-    //.console.log(e):
-    // KeyboardEvent {isTrusted: true, key: 'ArrowRight', code: 'ArrowRight', location: 0, ctrlKey: false, …}
-    // isTrusted: true
-    // altKey: false
-    // bubbles: true
-    // cancelBubble: false
-    // cancelable: true
-    // charCode: 0
-    // code: "ArrowRight"
-    // composed: true
-    // ctrlKey: false
-    // currentTarget: null
-    // defaultPrevented: false
-    // detail: 0
-    // eventPhase: 0
-    // isComposing: false
-    // key: "ArrowRight"
-    // keyCode: 39
-    // location: 0
-    // metaKey: false
-    // path: (4) [body, html, document, Window]
-    // repeat: false
-    // returnValue: true
-    // shiftKey: false
-    // sourceCapabilities: InputDeviceCapabilities {firesTouchEvents: false}
-    // srcElement: body
-    // target: body
-    // timeStamp: 1238
-    // type: "keydown"
-    // view: Window {window: Window, self: Window, document: document, name: '', location: Location, …}
-    // which: 39
-    // [[Prototype]]: KeyboardEvent
-    // 
+
 )
 
 
