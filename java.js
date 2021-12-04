@@ -1,10 +1,32 @@
+// import 
+// import { isEmpty } from "./validation.js";
+// import { testThefunctionFromMoudule } from "./calc.js";
+// testThefunctionFromMoudule(2, 5);
+// let btn = document.getElementById("btnvalidation");
+// btn.addEventListener("click",
+//     function() {
+//         let txtValidation = document.getElementById("validation").value;
+
+//         isEmpty(txtValidation);
+//     });
+// 
 // loading 
 
 let load = document.querySelector(".loading");
 
-window.addEventListener("load", function() {
+function hiddenLoader() {
     load.style.display = "none";
-});
+
+}
+
+function wait() {
+    setInterval("hiddenLoader()", 4000);
+
+}
+
+
+window.onload = wait();
+
 
 
 // setInterval("load()",1500);
@@ -349,17 +371,32 @@ window.onscroll = function scrollFixed() {
         //     document.getElementById("fixedNav").style.backgroundColor = "#000";
 
         // }
-        if (window.scrollY > 1500) {
-            document.getElementById("fixedNav").style.backgroundColor = "#ff00009e";
+        if (window.scrollY > 2500) {
+            document.getElementById("h1").style.color = "#000";
+            document.getElementById("h1").style.fontFamily = "cursive";
+
+            document.getElementById("fixedNav").style.backgroundImage = "linear-gradient(to right, red 20%, red 20%, #FFF 40%, #FFF 40%, #FFF 60%, #FFF 60%, #000 80%, #000000eb 80%)";
+
+        } else if (window.scrollY > 1500) {
+            document.getElementById("fixedNav").style.backgroundColor = "gold";
+            document.getElementById("fixedNav").style.backgroundImage = "unset"
+            document.getElementById("h1").style.color = "unset";
+
         } else if (window.scrollY > 1000) {
             document.getElementById("fixedNav").style.backgroundColor = "yellowgreen";
+
+        } else if (window.scrollY > 500) {
+            document.getElementById("fixedNav").style.backgroundColor = "green";
 
         } else if (window.scrollY > 20) {
             document.getElementById("fixedNav").style.backgroundColor = "gold";
 
         } else {
             document.getElementById("fixedNav").style.backgroundColor = "#000";
+            document.getElementById("h1").style.color = "#FFF";
+
         }
+
         if (window.scrollY > 1000) {
             document.getElementById("fixed").classList.add("fixed");
 
