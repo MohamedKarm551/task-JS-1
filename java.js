@@ -466,6 +466,31 @@ function filterSelection(str) {
     }
 
 }
+// // filter 4 Dec 
+let buttonsList = document.querySelectorAll(".filter-btn li"); //all btn for filter
+let items = document.querySelectorAll(".items .box"); //all imgs for filter
+for (var i = 0; i < buttonsList.length; i++) {
+    buttonsList[i].addEventListener("click", function() {
+        document.querySelector(".filter-btn li.active").classList.remove("active");
+        this.classList.add("active");
+        let target = this.dataset.target;
+        console.log(target);
+        for (var j = 0; j < items.length; j++) {
+            items[j].classList.add("hide");
+            items[j].classList.remove("visible");
+            console.log(items[j].dataset.id);
+            if (target == items[j].dataset.id || target == "all") {
+                items[j].classList.remove("hide");
+                items[j].classList.add("visible");
+
+            }
+        }
+
+    })
+}
+
+
+// 
 //
 // function getdate() {
 //     var json = new XMLHttpRequest();

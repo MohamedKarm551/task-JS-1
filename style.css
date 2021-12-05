@@ -212,10 +212,7 @@ select {
     border-bottom: 7px solid yellow;
     padding-bottom: 20px;
     padding-top: 20px;
-    border-bottom-left-radius: 2em;
-    border-bottom-right-radius: 2em;
-    border-top-left-radius: 2em;
-    border-top-right-radius: 2em;
+    border-radius: 2em;
     border-top: 7px solid yellowgreen;
     text-align: center;
     align-items: center;
@@ -420,6 +417,69 @@ label {
 
 .filter-hidden {
     display: none;
+}
+
+
+/* 5 DEC */
+
+.portfolio {
+    padding: 20px;
+    margin: 0 0 80px 0;
+}
+
+.filter-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.filter-btn li {
+    width: 80px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    padding: 20px;
+    background-color: lightseagreen;
+    display: inline-block;
+    color: #fff;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 2em;
+    -webkit-border-radius: 2em;
+}
+
+.portfolio .filter-btn li.active {
+    background-color: tomato;
+    font-family: cursive;
+    font-size: 16px;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.items {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2%;
+}
+
+.items .box {
+    width: 100%;
+    text-align: center;
+}
+
+.items .box img {
+    max-width: 100%;
+    object-fit: cover;
+    height: 260px;
+}
+
+.hide {
+    display: none;
+}
+
+.visible {
+    display: unset;
 }
 
 
