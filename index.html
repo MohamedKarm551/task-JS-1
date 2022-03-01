@@ -1,66 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task 1 Java</title>
-    <link rel="shortcut icon" href="img/icons8-js-file-64.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="img/icons8-js-file-64.png"
+      type="image/x-icon"
+    />
 
     <!-- cdn font awsom icons -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <a href="#top">
-        <div id="fixed">☝🏼</div>
+      <div id="fixed">☝🏼</div>
     </a>
 
     <div class="fixedNav" id="fixedNav">
-        <h1 id="h1">steps to learn java script</h1>
+      <h1 id="h1">steps to learn java script</h1>
     </div>
     <!-- Task 1 -->
-    <video title="LOGO(0)" autoplay="" muted="" loop="" style="
-    margin: 20px auto;
-    width: fit-content;
-    text-align: center;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-" id="top">
-        <source src="img/dragon.mp4" type="video/mp4">
-        <!-- https://svgjs.dev/docs/3.0/ -->
-     </video>
-    <div class="task1" style="margin-top: 100px;">
-        <h2 class="task-title">Task 1</h2>
-        <div class="test">
-            <input type="number" name="" id="x" value="0">
-            <input type="number" name="" id="y" value="0">
-            <select id="select">
-                <optgroup label="العملية الحسابية">
-                    <option  value="+">+</option>
-                    <option  value="-">-</option>
-                    <option  value="*">*</option>
-                    <option  value="/">/</option>
-                </optgroup>
-        
-            </select>
-            <button id="res" onclick="operators()">result</button>
-        </div>
+    <video
+      title="LOGO(0)"
+      autoplay=""
+      muted=""
+      loop=""
+      style="
+        margin: 20px auto;
+        width: fit-content;
+        text-align: center;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+      "
+      id="top"
+    >
+      <source src="img/dragon.mp4" type="video/mp4" />
+      <!-- https://svgjs.dev/docs/3.0/ -->
+    </video>
+    <div class="task1" style="margin-top: 100px">
+      <h2 class="task-title">Task 1</h2>
+      <div class="test">
+        <input type="number" name="" id="x" value="0" />
+        <input type="number" name="" id="y" value="0" />
+        <select id="select">
+          <optgroup label="العملية الحسابية">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+          </optgroup>
+        </select>
+        <button id="res" onclick="operators()">result</button>
+      </div>
     </div>
-
 
     <!--  -->
     <div class="result">
-        <h1 id="result"></h1>
+      <h1 id="result"></h1>
     </div>
     <!-- End of task1 -->
 
     <!-- Task 2 -->
     <h2 class="task-title">Task 2</h2>
-    <input type="text" name="" id="name">
+    <input type="text" name="" id="name" />
     <button id="add">Add</button>
     <!-- document.getElementById("add").onclick = function() {
         var theText = document.getElementById("name").value;
@@ -68,22 +81,16 @@
         console.log(users);
         document.getElementById("count-is").innerHTML = "array length: " + users.length;
         document.getElementById("name").value = ""; -->
-    <br>
+    <br />
     <h2 id="count-is"></h2>
     <!-- End of task 2 -->
     <!-- task in session -->
     <!-- 1000 10   1000:2000 20    big  30% -->
-    <hr style="
-    width: 95%;
-">
-    <hr style="
-    width: 90%;
-">
-    <hr style="
-    width: 85%;
-">
-    <input type="number" name="" id="earn">
-    <button id="ok" onclick="tax()"> نسبة الضرائب</button>
+    <hr style="width: 95%" />
+    <hr style="width: 90%" />
+    <hr style="width: 85%" />
+    <input type="number" name="" id="earn" />
+    <button id="ok" onclick="tax()">نسبة الضرائب</button>
     <h2 id="show-it"></h2>
     <!-- function tax() {
         var earn = document.getElementById("earn").value;
@@ -98,142 +105,135 @@
         }
     }
      -->
-    <hr style="
-    width: 95%;
-">
-    <hr style="
-    width: 90%;
-">
-    <hr style="
-    width: 85%;
-">
+    <hr style="width: 95%" />
+    <hr style="width: 90%" />
+    <hr style="width: 85%" />
     <!-- task 3  21 Oct -->
     <h2 class="task-title">Task 3</h2>
-    <input type="number" name="" id="grade" placeholder="your grade from  total">
-    <input type="number" name="" id="total" placeholder="Total">
-    <button id="ok" onclick="grade()"> نتيجتك بالدرجات والنسبة  </button>
-    <input type="text" name="" id="percent" placeholder="النسبة المئوية">
-    <input type="text" name="" id="ranking" placeholder="التقدير">
+    <input
+      type="number"
+      name=""
+      id="grade"
+      placeholder="your grade from  total"
+    />
+    <input type="number" name="" id="total" placeholder="Total" />
+    <button id="ok" onclick="grade()">نتيجتك بالدرجات والنسبة</button>
+    <input type="text" name="" id="percent" placeholder="النسبة المئوية" />
+    <input type="text" name="" id="ranking" placeholder="التقدير" />
     <!--end of  task 3  21 Oct -->
     <!-- task4 -->
-    <hr style="
-    width: 95%;
-">
-    <hr style="
-    width: 90%;
-">
-    <hr style="
-    width: 85%;
-">
+    <hr style="width: 95%" />
+    <hr style="width: 90%" />
+    <hr style="width: 85%" />
     <h2 class="task-title">Task 4</h2>
-    <div class="container-imgs" id="productRow">
-
-
-    </div>
-
-
-
+    <div class="container-imgs" id="productRow"></div>
 
     <!--  -->
-    <hr style="
-    width: 95%;
-">
-    <hr style="
-    width: 90%;
-">
-    <hr style="
-    width: 85%;
-">
+    <hr style="width: 95%" />
+    <hr style="width: 90%" />
+    <hr style="width: 85%" />
     <h3>To Do List</h3>
-    <input type="text" id="input-task">
-    <button onclick="addInlist()" id="Add">  ADD  </button>
-    <button onclick="edit()" style="display: none;" id="update">  Update  </button>
-    <input type="hidden" id="hidden-input">
+    <input type="text" id="input-task" />
+    <button onclick="addInlist()" id="Add">ADD</button>
+    <button onclick="edit()" style="display: none" id="update">Update</button>
+    <input type="hidden" id="hidden-input" />
     <p>double click on list item to delete</p>
     <ul id="list-items"></ul>
     <!--  -->
-    <hr style="
-    width: 95%;
-">
-    <hr style="
-    width: 90%;
-">
-    <hr style="
-    width: 85%;
-">
+    <hr style="width: 95%" />
+    <hr style="width: 90%" />
+    <hr style="width: 85%" />
     <div class="To-Do-list2">
-        <label for="txt-name">Name: </label>
-        <br>
-        <input type="text" name="txt-name" id="txt-name" placeholder="Name">
-        <br>
-        <label for="txt-des">Description: </label>
-        <br>
-        <input type="text" name="txt-des" id="txt-des" placeholder="Description">
-        <br>
+      <label for="txt-name">Name: </label>
+      <br />
+      <input type="text" name="txt-name" id="txt-name" placeholder="Name" />
+      <br />
+      <label for="txt-des">Description: </label>
+      <br />
+      <input
+        type="text"
+        name="txt-des"
+        id="txt-des"
+        placeholder="Description"
+      />
+      <br />
 
-        <label for="txt-salary">Salary: </label>
-        <br>
-        <input type="number" name="txt-salary" id="txt-salary" placeholder="$">
-        <br>
-        <label for="txt-info">info: </label>
-        <br>
+      <label for="txt-salary">Salary: </label>
+      <br />
+      <input type="number" name="txt-salary" id="txt-salary" placeholder="$" />
+      <br />
+      <label for="txt-info">info: </label>
+      <br />
 
-
-        <input type="text" name="txt-info" id="txt-info" placeholder="Info">
-        <br>
-        <input type="hidden" id="toSaveIndex">
-        <button style="width: 200px;
-        background: darkcyan;
-    " id="txt-add" onclick="addlist2()">Add </button>
-        <button style="width: 200px;
-        background: #142d2dbf;
-    " id="txt-update" onclick="editinfo()">Update </button>
-
+      <input type="text" name="txt-info" id="txt-info" placeholder="Info" />
+      <br />
+      <input type="hidden" id="toSaveIndex" />
+      <button
+        style="width: 200px; background: darkcyan"
+        id="txt-add"
+        onclick="addlist2()"
+      >
+        Add
+      </button>
+      <button
+        style="width: 200px; background: #142d2dbf"
+        id="txt-update"
+        onclick="editinfo()"
+      >
+        Update
+      </button>
     </div>
     <div id="show-items" class="show-items">
-        <div class="list-item" style="
-    width: fit-content;
-    margin: 10px 10px 20px 10px;
-    text-align: center;
-">
-            <img src="img/img1.webp" alt="" style="
-    width: 100%;
-    object-fit: cover;
-">
-            <p style="
-    font-size: 20px;
-    font-family: cursive;
-">Name</p>
-            <span style="
-    background: green;
-    font-size: 20px;
-    padding: 10px;
-    font-weight: bold;
-    color: #fff;
-">salary</span>
+      <div
+        class="list-item"
+        style="
+          width: fit-content;
+          margin: 10px 10px 20px 10px;
+          text-align: center;
+        "
+      >
+        <img
+          src="img/img1.webp"
+          alt=""
+          style="width: fit-content; object-fit: cover"
+        />
+        <p style="font-size: 20px; font-family: cursive">Name</p>
+        <span
+          style="
+            background: green;
+            font-size: 20px;
+            padding: 10px;
+            font-weight: bold;
+            color: #fff;
+          "
+          >salary</span
+        >
 
-            <p>info</p>
-            <p contenteditable="true">des</p>
-        </div>
-
-
+        <p>info</p>
+        <p>des</p>
+      </div>
     </div>
 
     <!--  -->
-    <hr style="
-    width: 95%;
-">
-    <hr style="
-    width: 90%;
-">
-    <hr style="
-    width: 85%;
-">
-    <div style="text-align: center;min-height: 500px;background: #ddd;padding: 30px;">
-        <img src="img/item1.jpg" alt="" title="/full-stack-round-11/26/1650" id="slide-show" style="
-        height: 400px;
-        object-fit: cover;
-    ">
+    <hr style="width: 95%" />
+    <hr style="width: 90%" />
+    <hr style="width: 85%" />
+    <h2 class="task-title" style="font-family: system-ui">slide-show</h2>
+    <div
+      style="
+        text-align: center;
+        min-height: 500px;
+        background: #dddddd6b;
+        padding: 30px;
+      "
+    >
+      <img
+        src="img/item1.jpg"
+        alt="slide-show"
+        title="/full-stack-round-11/26/1650   slide-show"
+        id="slide-show"
+        style="height: 400px; object-fit: cover"
+      />
     </div>
     <!-- 
         // slide show
@@ -256,96 +256,94 @@ setInterval("slideShow()", 1500);
     <h2 class="task-title">Task 4 Nov 2021</h2>
 
     <div class="container">
-        <button class="accord">First  👇</button>
-        <div class="info style-info">
-            <p>
-                🥰Itrax 🥰
-            </p>
-
-        </div>
-        <button class="accord">Second  👇</button>
-        <div class="info style-info">
-            <p>
-                🥰محمد عمرو 🥰
-            </p>
-
-        </div>
-        <button class="accord">third  👇</button>
-        <div class="info style-info">
-            <p>
-                🙈حمثلاح🙉
-            </p>
-
-        </div>
+      <button class="accord">First 👇</button>
+      <div class="info-hide style-info">
+        <p>🥰Itrax 🥰</p>
+      </div>
+      <button class="accord">Second 👇</button>
+      <div class="info-hide style-info">
+        <p>🥰محمد عمرو 🥰</p>
+      </div>
+      <button class="accord">third 👇</button>
+      <div class="info-hide style-info">
+        <p>🙈حمثلاح🙉</p>
+      </div>
     </div>
     <!--  -->
-    <button onclick="filterSelection('all')" id="txt-all" class="Active">All</button>
+    <button onclick="filterSelection('all')" id="txt-all" class="Active">
+      All
+    </button>
     <button onclick="filterSelection('Assaf')" id="txt-assaf">Assaf</button>
-    <button onclick="filterSelection('Cartoon')" id="txt-catroon">Cartoon</button>
+    <button onclick="filterSelection('Cartoon')" id="txt-catroon">
+      Cartoon
+    </button>
     <button onclick="filterSelection('Emoji')" id="txt-emoji">Emoji</button>
     <div class="filter-imgs">
-        <img src="img/assaf1.jpg" name="assaf" title="ASSAF" class="imgForFilter">
-        <img src="img/assaf2.jpg" name="assaf" class="imgForFilter">
-        <img src="img/assaf3.jpg" name="assaf" class="imgForFilter">
-        <img src="img/cartoon1.png" name="Cartoon" class="imgForFilter">
-        <img src="img/assaf4.jpg" name="assaf" class="imgForFilter">
-        <img src="img/cartoon3.jpg" name="Cartoon" class="imgForFilter">
-        <img src="img/assaf5.jpg" name="assaf" class="imgForFilter">
-        <img src="img/cartoon2.jpg" name="Cartoon" class="imgForFilter">
-        <img src="img/emoji1.jpg" name="Emoji" class="imgForFilter">
-        <img src="img/emoji2.jpg" name="Emoji" class="imgForFilter">
-        <img src="img/emoji3.jpg" name="Emoji" class="imgForFilter">
-
-
+      <img
+        src="img/assaf1.jpg"
+        name="assaf"
+        title="ASSAF"
+        class="imgForFilter"
+      />
+      <img src="img/assaf2.jpg" name="assaf" class="imgForFilter" />
+      <img src="img/assaf3.jpg" name="assaf" class="imgForFilter" />
+      <img src="img/cartoon1.png" name="Cartoon" class="imgForFilter" />
+      <img src="img/assaf4.jpg" name="assaf" class="imgForFilter" />
+      <img src="img/cartoon3.jpg" name="Cartoon" class="imgForFilter" />
+      <img src="img/assaf5.jpg" name="assaf" class="imgForFilter" />
+      <img src="img/cartoon2.jpg" name="Cartoon" class="imgForFilter" />
+      <img src="img/emoji1.jpg" name="Emoji" class="imgForFilter" />
+      <img src="img/emoji2.jpg" name="Emoji" class="imgForFilter" />
+      <img src="img/emoji3.jpg" name="Emoji" class="imgForFilter" />
     </div>
     <!--  -->
     <h2 class="task-title">Task Filter 4 Dec</h2>
     <div class="portfolio">
-        <ul class="filter-btn">
-            <!-- data-target -->
-            <li class="active" data-target="all">ALL</li>
-            <li data-target="Assaf">Assaf</li>
-            <li data-target="Cartoon">Cartoon</li>
-            <li data-target="Emoji">Emoji</li>
-        </ul>
-        <div class="items">
-            <div class="box" data-id="Cartoon">
-                <img src="img/cartoon1.png" alt="">
-            </div>
-            <div class="box" data-id="Assaf">
-                <img src="img/assaf1.jpg" alt="">
-            </div>
-            <div class="box" data-id="Cartoon">
-                <img src="img/cartoon2.jpg" alt="">
-            </div>
-            <div class="box" data-id="Assaf">
-                <img src="img/assaf2.jpg" alt="">
-            </div>
-            <div class="box" data-id="Cartoon">
-                <img src="img/cartoon3.jpg" alt="">
-            </div>
-            <div class="box" data-id="Assaf">
-                <img src="img/assaf3.jpg" alt="">
-            </div>
-            <div class="box" data-id="Cartoon">
-                <img src="img/cartoon4.jpg" alt="">
-            </div>
-            <div class="box" data-id="Assaf">
-                <img src="img/assaf4.jpg" alt="">
-            </div>
-            <div class="box" data-id="Assaf">
-                <img src="img/assaf5.jpg" alt="">
-            </div>
-            <div class="box" data-id="Emoji">
-                <img src="img/emoji1.jpg" alt="">
-            </div>
-            <div class="box" data-id="Emoji">
-                <img src="img/emoji2.jpg" alt="">
-            </div>
-            <div class="box" data-id="Emoji">
-                <img src="img/emoji3.jpg" alt="">
-            </div>
+      <ul class="filter-btn">
+        <!-- data-target -->
+        <li class="active" data-target="all">ALL</li>
+        <li data-target="Assaf">Assaf</li>
+        <li data-target="Cartoon">Cartoon</li>
+        <li data-target="Emoji">Emoji</li>
+      </ul>
+      <div class="items">
+        <div class="box" data-id="Cartoon">
+          <img src="img/cartoon1.png" alt="" />
         </div>
+        <div class="box" data-id="Assaf">
+          <img src="img/assaf1.jpg" alt="" />
+        </div>
+        <div class="box" data-id="Cartoon">
+          <img src="img/cartoon2.jpg" alt="" />
+        </div>
+        <div class="box" data-id="Assaf">
+          <img src="img/assaf2.jpg" alt="" />
+        </div>
+        <div class="box" data-id="Cartoon">
+          <img src="img/cartoon3.jpg" alt="" />
+        </div>
+        <div class="box" data-id="Assaf">
+          <img src="img/assaf3.jpg" alt="" />
+        </div>
+        <div class="box" data-id="Cartoon">
+          <img src="img/cartoon4.jpg" alt="" />
+        </div>
+        <div class="box" data-id="Assaf">
+          <img src="img/assaf4.jpg" alt="" />
+        </div>
+        <div class="box" data-id="Assaf">
+          <img src="img/assaf5.jpg" alt="" />
+        </div>
+        <div class="box" data-id="Emoji">
+          <img src="img/emoji1.jpg" alt="" />
+        </div>
+        <div class="box" data-id="Emoji">
+          <img src="img/emoji2.jpg" alt="" />
+        </div>
+        <div class="box" data-id="Emoji">
+          <img src="img/emoji3.jpg" alt="" />
+        </div>
+      </div>
     </div>
     <!--  -->
     <h2 class="task-title">Task JSON</h2>
@@ -354,85 +352,93 @@ setInterval("slideShow()", 1500);
 
     </ul>
     <button onclick="getdate()">get data from"https://api.github.com/users"</button> -->
-    <br>
-    <br>
-    <br>
-    <input type="text" name="" id="repo" placeholder="get repo for user name " style="color: red;
-    background: #FFF;
-    font-size: 20px;">
+    <br />
+    <br />
+    <br />
+    <input
+      type="text"
+      name=""
+      id="repo"
+      placeholder="get repo for user name "
+      style="color: red; background: #fff; font-size: 20px"
+    />
     <button onclick="getrepos()">GET repositories</button>
-    <ul id="respos" style="list-style: decimal-leading-zero;font-family: cursive;font-size: 13pt;font-weight: 700;">
-
-
-    </ul>
+    <ul
+      id="respos"
+      style="
+        list-style: decimal-leading-zero;
+        font-family: cursive;
+        font-size: 13pt;
+        font-weight: 700;
+      "
+    ></ul>
     <!--  -->
-    <br>
-    <hr style="
-    width: 95%;
-">
-    <hr style="
-    width: 90%;
-">
-    <hr style="
-    width: 85%;
-">
+    <br />
+    <hr style="width: 95%" />
+    <hr style="width: 90%" />
+    <hr style="width: 85%" />
     <h2 class="task-title">Task 20 Nov</h2>
     <div class="container-slide-show">
-        <div class="item">
-            <img src="img/assaf1.jpg" alt="">
-            <div class="caption">
-                <h3>Assaf1</h3>
-                <p>assaf1</p>
-            </div>
+      <div class="item">
+        <img src="img/assaf1.jpg" alt="" />
+        <div class="caption">
+          <h3>Assaf1</h3>
+          <p>assaf1</p>
         </div>
-        <div class="item">
-            <img src="img/assaf2.jpg" alt="">
-            <div class="caption">
-                <h3>Assaf2</h3>
-                <p>assaf2</p>
-            </div>
+      </div>
+      <div class="item">
+        <img src="img/assaf2.jpg" alt="" />
+        <div class="caption">
+          <h3>Assaf2</h3>
+          <p>assaf2</p>
         </div>
-        <div class="item">
-            <img src="img/assaf3.jpg" alt="">
-            <div class="caption">
-                <h3>Assaf3</h3>
-                <p>assaf3</p>
-            </div>
+      </div>
+      <div class="item">
+        <img src="img/assaf3.jpg" alt="" />
+        <div class="caption">
+          <h3>Assaf3</h3>
+          <p>assaf3</p>
         </div>
-        <div class="item">
-            <img src="img/cartoon1.png" alt="">
-            <div class="caption">
-                <h3>cartoon1</h3>
-                <p>cartoon1</p>
-            </div>
+      </div>
+      <div class="item">
+        <img src="img/cartoon1.png" alt="" />
+        <div class="caption">
+          <h3>cartoon1</h3>
+          <p>cartoon1</p>
         </div>
-        <div class="item">
-            <img src="img/cartoon2.jpg" alt="">
-            <div class="caption">
-                <h3>cartoon2</h3>
-                <p>cartoon2</p>
-            </div>
+      </div>
+      <div class="item">
+        <img src="img/cartoon2.jpg" alt="" />
+        <div class="caption">
+          <h3>cartoon2</h3>
+          <p>cartoon2</p>
         </div>
+      </div>
     </div>
     <div class="lightBox-container">
-        <div class="ligtBox-item">
-            <i id="prev" class="fas fa-arrow-left"></i>
-            <i id="next" class="fas fa-arrow-right"></i>
-            <i id="close" class="far fa-times-circle"></i>
-        </div>
+      <div class="ligtBox-item">
+        <i id="prev" class="fas fa-arrow-left"></i>
+        <i id="next" class="fas fa-arrow-right"></i>
+        <i id="close" class="far fa-times-circle"></i>
+      </div>
     </div>
     <!-- <img class="imgMouse" src="https://i.giphy.com/media/AHeTfHgVFPHgs/giphy.webp" alt=""> -->
     <div class="loading">
-        <h1>Loading ..... </h1>
-        <span></span>
-        <span></span>
-        <span></span>
+      <h1>Loading .....</h1>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <input type="text" id="validation">
+    <input type="text" id="validation" />
     <button id="btnvalidation">test Validation</button>
+    <!--  -->
+    <br />
+    <br />
+    <br />
+    <h2 class="task-title">5 Dec</h2>
+
     <script src="java.js"></script>
     <!-- to import from another files  type="module"  -->
     <!-- <script type="module"  src="java.js"></script> -->
-</body>
-
+  </body>
 </html>
