@@ -310,7 +310,7 @@ function addlist2() {
   var desItem = document.getElementById("txt-des").value;
   var salaryItem = document.getElementById("txt-salary").value;
   var infoItem = document.getElementById("txt-info").value;
-if(nameItem !=="" && desItem !=="" , salaryItem !=="" , infoItem !==""){
+if(nameItem !=="" && desItem !=="" && salaryItem !=="" && infoItem !==""){
   var product = {
     Name: nameItem,
     des: desItem,
